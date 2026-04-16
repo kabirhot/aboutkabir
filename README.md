@@ -37,4 +37,4 @@ Improve responsiveness for mobile devices
 Enhance UI/UX design
 Add more interactive features
 Author
-Sanskar Jadha
+kabir hotchandani
