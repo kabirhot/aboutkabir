@@ -1,31 +1,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Orbitron:wght@400;600&family=Inter:wght@300;400&display=swap');
 
+
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
   background: #1af0ff;
   color: rgb(12, 2, 2);
   overflow-x: hidden;
+  animation: fadeIn 1s ease;
 }
-.hero h1 {
-  font-family: 'Bebas Neue', sans-serif; 
-}
+
 h1, h2 {
   font-family: 'Edu NSW ACT Hand Cursive', cursive;
   letter-spacing: 1px;
 }
 
+
 .nav {
   display: flex;
   justify-content: space-between;
+  align-items: center; /* Keeps logo and links aligned */
   padding: 20px 50px;
   background: rgba(0,0,0,0.2);
   backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-.logo {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 28px;
+/* Logo specific code */
+.logo img {
+  height: 50px;    
+  width: auto;
+  display: block;
+  transition: 0.3s;
+}
+
+.logo img:hover {
+  transform: scale(1.1);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
 }
 
 .nav-links a {
@@ -50,9 +67,10 @@ h1, h2 {
   width: 100%;
 }
 
+/* --- BUTTONS --- */
 button {
   background: rgb(3, 17, 23);
-  color: rgb(26, 240, 255) ;
+  color: rgb(26, 240, 255);
   border: none;
   padding: 10px 20px;
   cursor: pointer;
@@ -64,22 +82,17 @@ button:hover {
   transform: scale(1.1);
   box-shadow: 0 0 20px white;
 }
+
+/* --- HERO & CARDS --- */
+.hero h1 {
+  font-family: 'Bebas Neue', sans-serif; 
+}
+
 .page {
   height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.card  h1 {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 100px;
-  letter-spacing: 3px;
-  animation: float 3s infinite;
-}
-
-.card  p {
-  font-size: 18px;
 }
 
 .card {
@@ -92,65 +105,22 @@ button:hover {
   transition: 0.3s;
 }
 
+.card h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 100px;
+  letter-spacing: 3px;
+  animation: float 3s infinite;
+}
+
+.card p {
+  font-size: 18px;
+}
 
 .card:hover {
   transform: rotateX(5deg) rotateY(-5deg) scale(1.05);
 }
 
-
-.project-card {
-  display: block;
-  background: rgba(19, 3, 3, 0.2);
-  padding: 20px;
-  margin: 10px;
-  border-radius: 15px;
-  text-decoration: none;
-  color: white;
-  transition: 0.3s;
-}
-
-.project-card:hover {
-  background: rgb(7, 2, 2);
-  color: rgb(26, 240, 255);
-  transform: translateY(-10px);
-}
-
-
-.contact-strip {
-  width: 70%;
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 30px;
-  margin: 10px auto;
-  background: rgba(255,255,255,0.2);
-  border-radius: 12px;
-  transition: 0.3s;
-}
-
-.contact-strip:hover {
-  background:   rgb(7, 2, 2);
-  color: rgb(26, 240, 255);
-  transform: scale(1.03);
-}
-
-@keyframes float {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-15px); }
-  100% { transform: translateY(0); }
-}
-
-
-body {
-  animation: fadeIn 1s ease;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-
-
+/* --- PROJECTS SECTION --- */
 .projects-page {
   padding: 100px 80px;
   max-width: 1200px;
@@ -174,9 +144,14 @@ body {
   padding: 25px;
   border-radius: 15px;
   transition: 0.3s;
+  text-decoration: none;
+  color: white;
+  display: block;
 }
 
 .project-card:hover {
+  background: rgb(7, 2, 2);
+  color: rgb(26, 240, 255);
   transform: translateY(-10px) scale(1.03);
   box-shadow: 0 0 20px rgb(10, 1, 1);
 }
@@ -206,6 +181,7 @@ body {
   color: rgb(26, 240, 255);
 }
 
+/* --- ABOUT SECTION --- */
 .about-page {
   padding: 80px;
 }
@@ -242,6 +218,24 @@ body {
   transform: scale(1.05);
 }
 
+/* --- CONTACT & UTILS --- */
+.contact-strip {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 30px;
+  margin: 10px auto;
+  background: rgba(255,255,255,0.2);
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.contact-strip:hover {
+  background: rgb(7, 2, 2);
+  color: rgb(26, 240, 255);
+  transform: scale(1.03);
+}
+
 .terminal-card p {
   font-family: monospace;
   margin: 5px 0;
@@ -249,4 +243,16 @@ body {
 
 .terminal-card span {
   color: #00ff99;
+}
+
+/* --- ANIMATIONS --- */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
