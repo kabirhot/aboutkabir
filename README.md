@@ -2,7 +2,7 @@
 Portfolio Website--
 This is my personal portfolio website showcasing my projects, skills, and background as a Computer Engineering student.
 
-Link to website --: https://effective-garbanzo-q76ggprrvw5rh6w94-3000.app.github.dev/
+Link to website --  https://aboutkabir.vercel.app/
 
 Overview--
 The website is built using HTML and CSS and is structured into multiple pages for better navigation and clarity. It highlights my work, technical skills, and provides ways to get in touch.
